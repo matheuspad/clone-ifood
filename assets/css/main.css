@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+:root { 
+    --color1: #ea1d2c;
+    --color2: #f1f0f0;
+    --color3: #fff;
+    --color4: #3e3e3e;
+    --color5: #cc1825;
+    --color6: #9eb53e;
+    --color7: #b6d048;
+
+    --font-Roboto: "Roboto", sans-serif;
+    --font-Quicksand: "Quicksand";
+}
+
+body{
+    background-color: var(--color3);
+    font-family: var(--font-Roboto);
+}
+
+.header {
+    background-color: var(--color2);  /* o "var" acessa as cores definidas ali em cima; poderia usar o "color: blue" que escolheria a cor diretamente */
+    display: flex; /* Layout flexível */
+    align-items: center; /* Alinha itens verticalmente */
+    justify-content: center; /* Centraliza itens horizontalmente */
+    padding: 40px 0; /* Espaçamento vertical */
+}
+
+
+.header__logo{
+    width: 80px; 
+}
+
+.header__containerMenu {
+    max-width: 1228px; /* tamanho máximo */
+    display: flex; 
+    align-items: center;
+    text-align: center;
+    justify-content: space-between; /* como os itens são distribuídos no eixo principal; around = adiciona espaço tanto entre os itens quanto nas extremidades; between = distribui o espaço apenas entre os itens,*/ 
+    flex-wrap: wrap; /* respeitar a largura do container */
+    flex-grow: 1 /* ocupe os espaços vazios */
+}
+
+* { 
+    /*seleciona todos os elementos */ 
+    /*removendo as definições gerais */
+    margin: 0; /* espaçamento externo */
+    padding: 0; /* espaçamento interno */ 
+    box-sizing: border-box; 
+    text-decoration: none;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: 35px; /* espaço entre os itens */
+}
+
+.header__nav a{
+    color: var(--color4);
+    font-size: 16px;
+}
+
+.header__menu2-botao1 {
+    color: var(--color1);
+    font-size: 16px;
+}
+
+.header__menu2-botao2 {
+    color: var(--color3);
+    background-color: var(--color1);
+    font-size: 16px;
+    padding: 0.7rem 1.8rem;
+    border-radius: 5px;
+}
+
+.header__menu2{
+    display: flex;
+    align-items: center;
+    gap: 35px; /* espaço entre os itens */
+}
+
+.text{
+    text-align: center;
+    align-items: center;
+    padding: 60px 0 30px 0;
+    flex-direction: column;
+}
+
+.text__titulo {
+    font-size: 48px;
+    color: var(--color4); /* ou qualquer cor definida */
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 14px;
+    font-family: var(--font-Roboto);
+}
+
+.text__geral {
+    font-size: 17.6px;
+    color: var(--black);
+    text-align: center;
+    font-family: var(--font-Quicksand);
+}
+
+.banner{
+    gap: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 300px;
+}
+
+.banner__Restaurante{
+    background-color: var(--color1);
+    background-image: url(/assets/img/hamburguer.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.banner__card{
+    color: var(--color3);
+    font-size: 24px;
+    border-radius: 20px;
+    width: 404px;
+    height: 214px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.banner__Mercado{
+    background-color: var(--color7);
+    background-image: url(/assets/img/carrinho.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.banner__botao {
+    padding: 10px 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 12px;
+    color: var(--color3);
+}
+
+.banner__opcoes1 {
+    background-color: var(--color5);
+}
+
+.banner__opcoes2 {
+    background-color: var(--color6);
+}
